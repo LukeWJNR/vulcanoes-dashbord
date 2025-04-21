@@ -1,0 +1,256 @@
+/* Custom CSS for the Volcano Monitoring Dashboard */
+
+/* Navigation bar styles */
+.nav-link {
+    display: inline-block;
+    text-align: center;
+    margin: 0 5px;
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.nav-link:hover {
+    background-color: #f5f5f5;
+}
+
+.nav-link svg {
+    display: block;
+    margin: 0 auto 4px auto;
+}
+
+.nav-link span {
+    font-size: 12px;
+}
+
+/* Info panel styling */
+.info-panel {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Alert level tags */
+.info-tag {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.tag-normal {
+    background-color: #4CAF50;
+}
+
+.tag-advisory {
+    background-color: #2196F3;
+}
+
+.tag-watch {
+    background-color: #FF9800;
+}
+
+.tag-warning {
+    background-color: #F44336;
+}
+
+.tag-uncertain {
+    background-color: #9E9E9E;
+}
+
+/* Stat cards container */
+.stat-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+/* Individual stat card */
+.stat-card {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 10px;
+    width: 30%;
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Section styling */
+.info-section {
+    margin-bottom: 15px;
+}
+
+.info-section h4 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .stat-container {
+        flex-direction: column;
+    }
+    
+    .stat-card {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Embedding-specific optimizations */
+.embedded-view {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.embedded-view .block-container {
+    padding: 0 !important;
+    max-width: 100% !important;
+}
+
+/* Animation container styling */
+.animation-container {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 15px 0;
+    background-color: #f9f9f9;
+}
+
+/* Control panel styling */
+.control-panel {
+    background-color: #f0f2f6;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+/* Button styling */
+.custom-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.custom-button:hover {
+    background-color: #45a049;
+}
+
+/* Tooltip styling */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Phase button styling for 2D eruption visualization */
+.phase-button {
+    background-color: #f0f2f6;
+    border: 1px solid #d0d7de;
+    color: #24292f;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin: 5px 2px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.phase-button:hover {
+    background-color: #e0e3e9;
+}
+
+.phase-button.active {
+    background-color: #0366d6;
+    color: white;
+    border-color: #0366d6;
+}
+
+/* Phase timeline styling */
+.phase-timeline {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.timeline-phase {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.timeline-phase::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #d0d7de;
+    top: 50%;
+    right: -50%;
+    z-index: 1;
+}
+
+.timeline-phase:last-child::after {
+    display: none;
+}
+
+.timeline-dot {
+    width: 15px;
+    height: 15px;
+    background-color: #d0d7de;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-dot.active {
+    background-color: #0366d6;
+}

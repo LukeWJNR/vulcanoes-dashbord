@@ -1,0 +1,42 @@
+# Version control
+.git
+.gitignore
+.github
+
+# Environment files
+.env*
+*.env
+
+# Cache files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Development files
+*.log
+*.md
+LICENSE
+tests/
+.vscode/
+
+# Build directories
+dist/
+build/
+*.egg-info/
+
+# Docker files
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Project specific
+.replit
+.upm/

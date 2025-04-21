@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volcano Dashboard Embedding Reference</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .note {
+            background-color: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Volcano Dashboard Embedding Guide</h1>
+    
+    <p>This guide shows how to properly embed the Volcano Dashboard in your website.</p>
+    
+    <h2>Basic Embedding</h2>
+    <p>To embed the entire dashboard, use this code:</p>
+    <pre><code>&lt;iframe 
+    src="YOUR_APP_URL" 
+    width="100%" 
+    height="800px" 
+    style="border:none;margin:0;padding:0;" 
+    allow="fullscreen"
+    title="Volcano Monitoring Dashboard"&gt;
+&lt;/iframe&gt;</code></pre>
+
+    <div class="note">
+        <strong>Note:</strong> Replace YOUR_APP_URL with your actual Replit app URL.
+    </div>
+
+    <h2>Embedding Specific Pages</h2>
+    <p>To embed specific pages from the dashboard, add the page name to the URL:</p>
+    
+    <h3>Scientific 3D Eruption</h3>
+    <pre><code>&lt;iframe 
+    src="YOUR_APP_URL/scientific_3d_eruption" 
+    width="100%" 
+    height="800px" 
+    style="border:none;margin:0;padding:0;" 
+    allow="fullscreen"
+    title="Scientific 3D Volcano Eruption"&gt;
+&lt;/iframe&gt;</code></pre>
+
+    <h2>Optimization for Embedded Views</h2>
+    <p>When embedding, consider the following optimization techniques:</p>
+    <ul>
+        <li>Use the <code>Low</code> quality setting in embedded views to improve performance</li>
+        <li>Set appropriate height - 700px to 800px is recommended for the 3D visualizations</li>
+        <li>If you're embedding multiple visualizations, use a minimum height of 500px</li>
+    </ul>
+
+    <h2>Troubleshooting</h2>
+    <p>If you encounter any issues with embedding:</p>
+    <ol>
+        <li>Make sure CORS is enabled on the server (already configured in this app)</li>
+        <li>Ignore 404 errors for /_stcore/health and /_stcore/host-config - these are normal when embedding</li>
+        <li>If visualizations don't load, try adding the following parameter: <code>?embed=true</code> to the URL</li>
+    </ol>
+
+    <div class="note">
+        <strong>Performance Tip:</strong> The Scientific 3D Eruption page is the most resource-intensive. 
+        For best performance when embedding, consider using the <code>Low</code> quality setting, which can 
+        be set in the sidebar after the page loads.
+    </div>
+</body>
+</html>
